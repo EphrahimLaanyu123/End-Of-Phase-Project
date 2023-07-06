@@ -122,3 +122,54 @@ font-family: Julius Sans One;
 #allListings{
     color: #E22D2D;
 }
+.contacts{
+    /* width: 1440px;
+height: 1024px;
+background: #FFF;
+background-size: cover; */
+width: 1440px;
+height: 1024px;
+background: #292424;
+width: 100vw;
+height: 100vh;
+flex-shrink: 0;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+margin: 0;
+
+}
+
+#bridgeimg{
+    width: 500px;
+height: 749px;
+flex-shrink: 0;
+border-radius: 10px;
+margin-left: 85px;
+margin-top: 100px;
+}
+#logo2{
+    width: 163px;
+height: 116px;
+flex-shrink: 0;
+margin-left: 550px;
+margin-bottom: 700px;
+
+}
+#guide{
+    margin-left: 1100px;
+    margin-bottom: 3000px;
+    color: #FFF;
+font-family: Julius Sans One;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+#hoursAvailable{
+    display: flex;
+    width: 364px;
+    height: 292px;
+    flex-direction: column;
+    flex-shrink: 0;
+}

@@ -1,0 +1,215 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "name": "Cozy Cottage",
+        "type": "House",
+        "location": "Kileleshwa",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 1200,
+        "available": true
+      },
+      {
+        "id": 2,
+        "name": "Spacious Villa",
+        "type": "House",
+        "location": "Lavington",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 1800,
+        "available": false
+      },
+      {
+        "id": 3,
+        "name": "Modern Ranch",
+        "type": "House",
+        "location": "Kileleshwa",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "price": 2500,
+        "available": true
+      },
+      {
+        "id": 4,
+        "name": "Charming Bungalow",
+        "type": "House",
+        "location": "Lavington",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 1100,
+        "available": true
+      },
+      {
+        "id": 5,
+        "name": "Seaside Retreat",
+        "type": "House",
+        "location": "Kileleshwa",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 2000,
+        "available": true
+      },
+      {
+        "id": 6,
+        "name": "Classic Victorian",
+        "type": "House",
+        "location": "Lavington",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "price": 3500,
+        "available": false
+      },
+      {
+        "id": 7,
+        "name": "Countryside Manor",
+        "type": "House",
+        "location": "Kileleshwa",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 2200,
+        "available": true
+      },
+      {
+        "id": 8,
+        "name": "Rustic Log Cabin",
+        "type": "House",
+        "location": "Lavington",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 1800,
+        "available": true
+      },
+      {
+        "id": 9,
+        "name": "Contemporary Townhouse",
+        "type": "House",
+        "location": "Kileleshwa",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "price": 1500,
+        "available": false
+      },
+      {
+        "id": 10,
+        "name": "Country Farmhouse",
+        "type": "House",
+        "location": "Lavington",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "price": 2500,
+        "available": true
+      },
+      {
+        "id": 11,
+        "name": "Lakeview Cottage",
+        "type": "House",
+        "location": "Kileleshwa",
+        "bedrooms": 3,
+        "bathrooms":3,
+        "price": 1800,
+        "available":false
+
+    
+      },
+      {
+        "id": 12,
+        "name": "Luxury Penthouse",
+        "type": "Apartment",
+        "location": "Westlands",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "price": 3500,
+        "available": true
+      },
+      {
+        "id": 13,
+        "name": "Family Home",
+        "type": "House",
+        "location": "Karen",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 2500,
+        "available": false
+      },
+      {
+        "id": 14,
+        "name": "Cozy Cabin",
+        "type": "Cabin",
+        "location": "Westlands",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 800,
+        "available": true
+      },
+      {
+        "id": 15,
+        "name": "Modern Loft",
+        "type": "Apartment",
+        "location": "Karen",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 1500,
+        "available": true
+      },
+      {
+        "id": 16,
+        "name": "Spacious Townhouse",
+        "type": "House",
+        "location": "Westlands",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 2000,
+        "available": true
+      },
+      {
+        "id": 17,
+        "name": "Beachfront Villa",
+        "type": "House",
+        "location": "Karen",
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "price": 5000,
+        "available": false
+      },
+      {
+        "id": 18,
+        "name": "Studio Apartment",
+        "type": "Apartment",
+        "location": "Westlands",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 1000,
+        "available": true
+      },
+      {
+        "id": 19,
+        "name": "Country Cottage",
+        "type": "House",
+        "location": "Karen",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 1200,
+        "available": true
+      },
+      {
+        "id": 20,
+        "name": "Luxury Condo",
+        "type": "Condo",
+        "location": "Westlands",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "price": 3000,
+        "available": false
+      },
+      {
+        "id": 21,
+        "name": "Rustic Farmhouse",
+        "type": "House",
+        "location": "Karen",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 1800,
+        "available": true
+      }
+    ]}      
