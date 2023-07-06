@@ -1,0 +1,124 @@
+body{
+    background: url(./images/IMG-1944.jpg), lightgray 50%;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+}
+
+.HomeTopBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.HomeTopBar li {
+    display: inline;
+    margin-right: 10px;
+}
+.HomeTopBar{
+
+    color:#FFF;
+    font-size: 20px;
+    font-family: Jomolhari;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 114px;
+    height: 32px;
+    margin-top: 85px;
+    margin-bottom: 907px;
+    margin-left: 85px;
+}
+
+#moto1{
+    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* width: 1440px;
+    height: 1024px; */
+    /* margin-top: 247px;
+    margin-bottom: 195px;
+    margin-left: 143px;
+    margin-right: 423px; */
+    display: flex;
+    /* width: 874px;
+    height: 582px; */
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #FFF;
+    /* font-size: 128px; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.locations{
+    width: 1440px;
+    height: 1024px;
+    background: #211E1E;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+
+}
+#locations2{
+    width: 1141px;
+    height: 980px;
+    flex-shrink: 0;
+    background: #3E3939;
+    margin-top: 5px;
+    margin-left: 300px;
+    margin-right: 70px;
+
+}
+#line1{
+    width: 953.034px;
+    height: 1px;
+    background: #000;
+    margin-left: 100px;
+    margin-top: 0px;
+}
+#explore{
+    color: #FFF;
+font-size: 36px;
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: 400;
+line-height: 105px;
+margin-left: 25px;
+}
+#exploreimg{
+    width: 1004px;
+    height: 488px;
+    flex-shrink: 0;
+    position: relative;
+    margin-left: 76px;
+    
+}
+#imgText{
+    position: absolute;
+    top: 150%;
+    padding: 20px;
+    color: #FFF;
+font-size: 64px;
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: 400;
+line-height: 70px;
+margin-left: 100px;
+}
+.listOfListings{
+    color: #FFF;
+font-size: 24px;
+font-family: Julius Sans One;
+
+}
+#allListings{
+    color: #E22D2D;
+}
