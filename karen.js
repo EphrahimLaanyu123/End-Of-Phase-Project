@@ -261,36 +261,11 @@ function fetchAndDisplayHousesInKileleshwa() {
 
   fetchAndDisplayHousesInLavington();
   //////////////////////////////////////////////////////////////////////DONE//////////////////////////////////////////////////////////////////////////////////////
-//   function addEventListeners() {
-//     const kileleshwa = document.getElementById("kileleshwa");
-//     const karen = document.getElementById("karen");
-//     const lavington = document.getElementById("lavington");
-//     const westlands = document.getElementById("westlands");
-
-  
-//     kileleshwa.addEventListener("click", () => {
-//       fetchAndDisplayHousesInKileleshwa();
-//     });
-  
-//     karen.addEventListener("click", () => {
-//       fetchAndDisplayHousesInKaren();
-//     });
-  
-//     lavington.addEventListener("click", () => {
-//       fetchAndDisplayHousesInLavington();
-//     });
-  
-//     westlands.addEventListener("click", () => {
-//       fetchAndDisplayHousesInWestlands();
-//     });
-//   }
-  
-//   addEventListeners();
 
 function addHoverEffectAndUnderlineStyling(button) {
     button.addEventListener("mouseover", () => {
       button.style.transform = "scale(1.1)";
-      button.style.borderBottom = "2px solid blue";
+      button.style.borderBottom = "2px solid black";
     });
   
     button.addEventListener("mouseout", () => {
@@ -310,5 +285,6 @@ function addHoverEffectAndUnderlineStyling(button) {
   addHoverEffectAndUnderlineStyling(servicesButton);
   addHoverEffectAndUnderlineStyling(aboutButton);
   addHoverEffectAndUnderlineStyling(contactsButton);
+
   
   
