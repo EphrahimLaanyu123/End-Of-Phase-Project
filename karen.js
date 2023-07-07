@@ -91,35 +91,53 @@ westieBtn.addEventListener("click", () => {
   westieDiv.style.display = "block";
 });
 
+const kilediv = document.getElementById("kilediv");
 
-const kileleshwaBtnn = document.getElementById("kileleshwa");
-const kilediv = document.getElementById("kileDiv");
+fetch("http://localhost:3000/properties")
+  .then(response => response.json())
+  .then(data => {
+    // Filter houses in Kileleshwa
+    const kileleshwaHouses = data.filter(house => house.location === "Kileleshwa");
 
-kileleshwaBtnn.addEventListener("click", () => {
-  // Fetch houses in Kileleshwa
-  fetchHousesInKileleshwa()
-    .then(houses => {
-      // Clear previous content
-      kilediv.innerHTML = "";
+    // Clear previous content
+    kilediv.innerHTML = "";
 
-      // Create and append house details to kileDiv
-      houses.forEach(house => {
-        const houseDetails = document.createElement("p");
-        houseDetails.textContent = `${house.name}, ${house.bedrooms} bedrooms, ${house.bathrooms} bathrooms, $${house.price}`;
-        kilediv.appendChild(houseDetails);
-      });
-    })
-    .catch(error => {
-      console.log("Error fetching houses:", error);
+    // Iterate through the houses and display their details in styled boxes
+    kileleshwaHouses.forEach(house => {
+      // Create a box element for each house
+      const houseBox = document.createElement("div");
+      houseBox.classList.add("house-box");
+
+      // Create an image element for the house
+      const imageElement = document.createElement("img");
+      imageElement.src = house.image;
+      imageElement.alt = house.name;
+      imageElement.classList.add("house-image");
+
+      // Create individual elements for other house details
+      const nameElement = document.createElement("p");
+      nameElement.textContent = `Name: ${house.name}`;
+
+      const bedroomsElement = document.createElement("p");
+      bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
+
+      const bathroomsElement = document.createElement("p");
+      bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
+
+      const priceElement = document.createElement("p");
+      priceElement.textContent = `Price: ${house.price}`;
+
+      // Append the elements to the house box
+      houseBox.appendChild(imageElement);
+      houseBox.appendChild(nameElement);
+      houseBox.appendChild(bedroomsElement);
+      houseBox.appendChild(bathroomsElement);
+      houseBox.appendChild(priceElement);
+
+      // Append the house box to the kileDiv
+      kilediv.appendChild(houseBox);
     });
-});
-
-function fetchHousesInKileleshwa() {
-  return fetch("http://localhost:3000/properties")
-    .then(response => response.json())
-    .then(data => {
-      // Filter houses in Kileleshwa
-      const kileleshwaHouses = data.properties.filter(house => house.location === "Kileleshwa");
-      return kileleshwaHouses;
-    });
-}
+  })
+  .catch(error => {
+    console.log("Error fetching houses:", error);
+  });
