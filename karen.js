@@ -1,3 +1,41 @@
+// const kileDivi = document.getElementById("kilediv");
+// const karenDivi = document.getElementById("karenDiv");
+// const westieDivi = document.getElementById("westieDiv");
+// const laviDivi = document.getElementById("laviDiv");
+
+// const kileButton = document.getElementById("kileleshwa");
+// const karenButton = document.getElementById("karen");
+// const westlandsButton = document.getElementById("westlands");
+// const lavingtonButton = document.getElementById("lavington");
+
+// kileButton.addEventListener("click", () => {
+//   kileDivi.style.display = "block";
+//   karenDivi.style.display = "none";
+//   westieDivi.style.display = "none";
+//   laviDivi.style.display = "none";
+// });
+
+// karenButton.addEventListener("click", () => {
+//   kileDivi.style.display = "none";
+//   karenDivi.style.display = "block";
+//   westieDivi.style.display = "none";
+//   laviDivi.style.display = "none";
+// });
+
+// westlandsButton.addEventListener("click", () => {
+//   kileDivi.style.display = "none";
+//   karenDivi.style.display = "none";
+//   westieDivi.style.display = "block";
+//   laviDivi.style.display = "none";
+// });
+
+// lavintonButton.addEventListener("click", () => {
+//   kileDivi.style.display = "none";
+//   karenDivi.style.display = "none";
+//   westieDivi.style.display = "none";
+//   laviDiv.style.display = "block";
+// });
+
 ////////////////////////////////////////////////////////////////////KILELESHWA////////////////////////////////////////////////////////////////////////////////////
 function fetchAndDisplayHousesInKileleshwa() {
     const kilediv = document.getElementById("kilediv");
@@ -223,3 +261,54 @@ function fetchAndDisplayHousesInKileleshwa() {
 
   fetchAndDisplayHousesInLavington();
   //////////////////////////////////////////////////////////////////////DONE//////////////////////////////////////////////////////////////////////////////////////
+//   function addEventListeners() {
+//     const kileleshwa = document.getElementById("kileleshwa");
+//     const karen = document.getElementById("karen");
+//     const lavington = document.getElementById("lavington");
+//     const westlands = document.getElementById("westlands");
+
+  
+//     kileleshwa.addEventListener("click", () => {
+//       fetchAndDisplayHousesInKileleshwa();
+//     });
+  
+//     karen.addEventListener("click", () => {
+//       fetchAndDisplayHousesInKaren();
+//     });
+  
+//     lavington.addEventListener("click", () => {
+//       fetchAndDisplayHousesInLavington();
+//     });
+  
+//     westlands.addEventListener("click", () => {
+//       fetchAndDisplayHousesInWestlands();
+//     });
+//   }
+  
+//   addEventListeners();
+
+function addHoverEffectAndUnderlineStyling(button) {
+    button.addEventListener("mouseover", () => {
+      button.style.transform = "scale(1.1)";
+      button.style.borderBottom = "2px solid blue";
+    });
+  
+    button.addEventListener("mouseout", () => {
+      button.style.transform = "scale(1)";
+      button.style.borderBottom = "none";
+    });
+  }
+  
+  const homeButton = document.getElementById("TheHomeBar");
+  const locationsButton = document.getElementById("HomeLocations");
+  const servicesButton = document.getElementById("services");
+  const aboutButton = document.getElementById("about");
+  const contactsButton = document.getElementById("contacts");
+  
+  addHoverEffectAndUnderlineStyling(homeButton);
+  addHoverEffectAndUnderlineStyling(locationsButton);
+  addHoverEffectAndUnderlineStyling(servicesButton);
+  addHoverEffectAndUnderlineStyling(aboutButton);
+  addHoverEffectAndUnderlineStyling(contactsButton);
+  
+  

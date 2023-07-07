@@ -13,12 +13,28 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
+    margin-left: 100px ;
+    margin-right: 1000px;
 }
 
 .HomeTopBar li {
     display: inline;
     margin-right: 10px;
 }
+.HomeTopBar button {
+    margin-right: 100px; /* Add right margin to create spacing between buttons */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .HomeTopBar button:last-child {
+    margin-right: 0; /* Remove right margin for the last button */
+  }
+
+  
+  .HomeTopBar button:hover {
+    z-index: 2;
+  }
 .HomeTopBar{
 
     color:#FFF;
@@ -173,9 +189,9 @@ line-height: normal;
     flex-direction: column;
     flex-shrink: 0;
 }
-#kilediv{
+/* #kilediv{
 display: none;
-color: #211E1E;
+color: #8caf4a;
 }
 #karendiv {
     display: none;
@@ -196,7 +212,7 @@ color: #211E1E;
     background-color: lightyellow;
     padding: 10px;
     margin-top: 10px;
-  }
+  } */
   .house-box {
     border: 1px solid black;
     padding: 10px;
@@ -271,3 +287,15 @@ background: #4B4949;
 margin-left: 251px;
 
 }
+#aboutus2{
+    width: 1087px;
+    height: 773px;
+    flex-shrink: 0;
+    border-radius: 52px;
+background: #776E6E;
+margin-left: 290px;
+margin-right: 2000px;
+margin-top: 60px;
+margin-bottom: 0px;
+}
+
