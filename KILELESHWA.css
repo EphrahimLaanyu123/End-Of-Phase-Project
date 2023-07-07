@@ -173,8 +173,9 @@ line-height: normal;
     flex-direction: column;
     flex-shrink: 0;
 }
-#kileDiv{
+#kilediv{
 display: none;
+color: #211E1E;
 }
 #karendiv {
     display: none;
@@ -202,4 +203,71 @@ display: none;
     margin-bottom: 10px;
     /* Add any additional styling you desire */
   }
-    
+  .house-box {
+    /* border: 1px solid #292424; */
+    padding: 0px;
+    margin-bottom: 0px;
+    background-color: #292424;
+    border-radius: 0%;
+    align-items: center;
+    display: flex;
+  }
+  
+  .house-box img {
+    width: 260px;
+    height: 216px;
+    flex-shrink: 0;
+    border-radius: 30px;
+  }
+  
+  .house-box p {
+    margin: 5px 0;
+    color: #FFF;
+  }
+      
+#locationList {
+  display: none;
+  position: absolute;
+  background-color: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+}
+
+#locationList li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#HomeLocations:hover + #locationList,
+#locationList:hover {
+  display: block;
+}
+
+.aboutus{
+    /* background-color: #211E1E;
+    width: 1250px;
+height: 876px;
+flex-shrink: 0;
+background-size: cover; */
+width: 1440px;
+height: 1024px;
+background: #292424;
+width: 100vw;
+height: 100vh;
+flex-shrink: 0;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+margin: 0;
+}
+
+#aboutus1{
+    width: 1250px;
+height: 876px;
+flex-shrink: 0;
+border-radius: 106px;
+background: #4B4949;
+margin-left: 251px;
+
+}
