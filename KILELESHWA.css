@@ -240,8 +240,122 @@ color: #8caf4a;
     margin: 5px 0;
     color: #FFF;
   }
-      
-#locationList {
+ .locations {
+  background-color: #4B4949;
+  color: white;
+  padding: 20px;
+}
+
+#locations2 {
+  text-align: center;
+}
+
+#explore {
+  color: white;
+  font-size: 24px;
+}
+
+#line1 {
+  height: 2px;
+  background-color: white;
+  margin: 20px auto;
+  width: 50%;
+}
+
+#imgText {
+  color: white;
+  font-size: 18px;
+}
+.house-box {
+  background-color: #292424;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.house-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.house-details p {
+  margin: 5px 0;
+}
+
+.house-details p:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}
+.house-box {
+    background-color: #292424;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .house-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .house-details {
+    flex-grow: 1;
+  }
+  
+  .house-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .house-details p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .house-price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .house-sold-out {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  
+.listOfListings {
+  list-style: none;
+  margin: 20px auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.listOfListings h2 {
+  color: white;
+  font-size: 24px;
+}
+
+.listOfListings ul {
+  color: white;
+  font-size: 18px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.listOfListings ul:hover {
+  text-decoration: underline;
+}
+     
+/* #locationList {
   display: none;
   position: absolute;
   background-color: white;
@@ -259,14 +373,10 @@ color: #8caf4a;
 #HomeLocations:hover + #locationList,
 #locationList:hover {
   display: block;
-}
+} */
 
-.aboutus{
-    /* background-color: #211E1E;
-    width: 1250px;
-height: 876px;
-flex-shrink: 0;
-background-size: cover; */
+/* .aboutus{
+
 width: 1440px;
 height: 1024px;
 background: #292424;
@@ -314,4 +424,40 @@ height: 520px;
 flex-shrink: 0;
 border-radius: 70px;
 
-}
+} */
+.about-section {
+    background-color: #221F1F;
+    color: white;
+    padding: 50px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+.listOfListings {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .house-box {
+    background-color: #292424;
+    color: white;
+    padding: 10px;
+    width: calc(25% - 20px); /* Adjust the width based on your desired layout */
+  }
+  
+  /* Add the rest of the styling rules mentioned in the previous response */
+  

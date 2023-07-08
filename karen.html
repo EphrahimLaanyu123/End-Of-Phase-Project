@@ -57,7 +57,7 @@
         <h1>LAVINGTON</h1>
 
     </div>
-    <div class="aboutus">
+    <!-- <div class="aboutus">
         <h1>ABOUT US</h1>
         <div id="aboutus1">
             <h1 id="aboutUsHeader">ABOUT US</h1>
@@ -75,7 +75,28 @@
             </div>
         </div>
         
-    </div>
+    </div> -->
+    <div class="about-section">
+        <div class="about-content">
+          <h1>About PROPLIST</h1>
+          <p>
+            PROPLIST is a leading online real estate platform that connects buyers, sellers, and renters in a seamless and efficient way. Our mission is to provide a user-friendly experience for individuals looking to browse and discover their dream homes, book property tours, and sell their properties effortlessly.
+          </p>
+          <p>
+            With our extensive listings and advanced search features, you can easily explore a wide range of properties based on your preferences. Whether you're searching for a cozy apartment, a luxurious villa, or a commercial space, PROPLIST offers a diverse selection to cater to your needs.
+          </p>
+          <p>
+            We understand the importance of finding the perfect home, and that's why our platform is designed to provide detailed property information, high-quality images, and interactive virtual tours. You can also directly contact sellers or agents, schedule property tours, and even submit offers through our secure messaging system.
+          </p>
+          <p>
+            For homeowners looking to sell their properties, PROPLIST offers a hassle-free listing process. By posting your property details, you can reach a wide audience of potential buyers and showcase the unique features of your property. Our platform provides exposure, marketing tools, and expert guidance to help you sell your property quickly and at the best possible price.
+          </p>
+          <p>
+            Join PROPLIST today and experience the convenience, efficiency, and reliability of our real estate platform. Browse, book, and sell with ease, and let us guide you on your journey to finding your perfect property.
+          </p>
+        </div>
+      </div>
+      
     <div class="contacts">
         <img id="bridgeimg" src="./images/joseph-barrientos-CtNeE97Dadk-unsplash.jpg" alt="">
         <img id="logo2" src="./images/download (1).png" alt="">
@@ -89,6 +110,74 @@
             BY APPOINTMENTS</p> -->
     
     </div>
+    <form id="tourForm">
+        <div>
+          <label for="nameInput">Name:</label>
+          <input type="text" id="nameInput" required>
+        </div>
+        <div>
+          <label for="emailInput">Email:</label>
+          <input type="email" id="emailInput" required>
+        </div>
+        <div>
+          <label for="phoneInput">Phone:</label>
+          <input type="tel" id="phoneInput" required>
+        </div>
+        <div>
+          <label for="dateInput">Tour Date:</label>
+          <input type="date" id="dateInput" required>
+        </div>
+        <button type="submit">Book Tour</button>
+      </form>
+    
+      <script>
+// Function to handle the form submission
+function handleFormSubmit(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // Get the form input values
+  const name = document.getElementById("nameInput").value;
+  const email = document.getElementById("emailInput").value;
+  const phone = document.getElementById("phoneInput").value;
+  const tourDate = document.getElementById("dateInput").value;
+
+  // Perform any additional processing or validation here
+  // ...
+
+  // Check if the selected date is already booked
+  if (isDateBooked(tourDate)) {
+    alert("ALREADY BOOKED!"); // Alert the user that the date is already booked
+    return;
+  }
+
+  // Simulate booking a tour and displaying the details
+  const bookingDetails = {
+    name: name,
+    email: email,
+    phone: phone,
+    tourDate: tourDate
+  };
+
+  // Add the booked date to the array
+  bookedDates.push(tourDate);
+
+  // Display the booking details in the console
+  console.log("Tour booked successfully:", bookingDetails);
+
+  // Display a "Tour Booked" message
+  const form = document.getElementById("tourForm");
+  const messageElement = document.createElement("p");
+  messageElement.textContent = "Tour Booked!";
+  form.appendChild(messageElement);
+
+  // Style the booked date
+  const dateInput = document.getElementById("dateInput");
+  dateInput.style.backgroundColor = "#CCCCCC";
+  dateInput.style.color = "#FFFFFF";
+  dateInput.disabled = true;
+}
+
+      </script>
     <h1>House Details Form</h1>
 
     <form id="houseForm">

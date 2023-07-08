@@ -1,224 +1,20 @@
-// const kileDivi = document.getElementById("kilediv");
-// const karenDivi = document.getElementById("karenDiv");
-// const westieDivi = document.getElementById("westieDiv");
-// const laviDivi = document.getElementById("laviDiv");
-
-// const kileButton = document.getElementById("kileleshwa");
-// const karenButton = document.getElementById("karen");
-// const westlandsButton = document.getElementById("westlands");
-// const lavingtonButton = document.getElementById("lavington");
-
-// kileButton.addEventListener("click", () => {
-//   kileDivi.style.display = "block";
-//   karenDivi.style.display = "none";
-//   westieDivi.style.display = "none";
-//   laviDivi.style.display = "none";
-// });
-
-// karenButton.addEventListener("click", () => {
-//   kileDivi.style.display = "none";
-//   karenDivi.style.display = "block";
-//   westieDivi.style.display = "none";
-//   laviDivi.style.display = "none";
-// });
-
-// westlandsButton.addEventListener("click", () => {
-//   kileDivi.style.display = "none";
-//   karenDivi.style.display = "none";
-//   westieDivi.style.display = "block";
-//   laviDivi.style.display = "none";
-// });
-
-// lavintonButton.addEventListener("click", () => {
-//   kileDivi.style.display = "none";
-//   karenDivi.style.display = "none";
-//   westieDivi.style.display = "none";
-//   laviDiv.style.display = "block";
-// });
-
-//////////////////////////////////////////////////////////////////KILELESHWA////////////////////////////////////////////////////////////////////////////////////
-function fetchAndDisplayHousesInKileleshwa() {
-    const kilediv = document.getElementById("kilediv");
-  
+function fetchAndDisplayHouses() {
     fetch("http://localhost:3000/properties")
       .then(response => response.json())
       .then(data => {
-        // Filter houses in Kileleshwa
-        const kileleshwaHouses = data.filter(house => house.location === "Kileleshwa");
+        const kilediv = document.getElementById("kilediv");
+        const karendiv = document.getElementById("karenDiv");
+        const westieDiv = document.getElementById("westieDiv");
+        const laviDiv = document.getElementById("laviDiv");
   
         // Clear previous content
         kilediv.innerHTML = "";
-  
-        // Iterate through the houses and display their details in styled boxes
-        kileleshwaHouses.forEach(house => {
-          // Create a box element for each house
-          const houseBox = document.createElement("div");
-          houseBox.classList.add("house-box");
-  
-          // Create an image element for the house
-          const imageElement = document.createElement("img");
-          imageElement.src = house.image;
-          imageElement.alt = house.name;
-          imageElement.classList.add("house-image");
-  
-          // Create individual elements for other house details
-          const nameElement = document.createElement("p");
-          nameElement.textContent = `Name: ${house.name}`;
-  
-          const bedroomsElement = document.createElement("p");
-          bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
-  
-          const bathroomsElement = document.createElement("p");
-          bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
-  
-          const priceElement = document.createElement("p");
-          priceElement.textContent = `Price: ${house.price}`;
-  
-          // Append the elements to the house box
-          houseBox.appendChild(imageElement);
-          houseBox.appendChild(nameElement);
-          houseBox.appendChild(bedroomsElement);
-          houseBox.appendChild(bathroomsElement);
-          houseBox.appendChild(priceElement);
-  
-          // Append the house box to the kilediv
-          kilediv.appendChild(houseBox);
-        });
-      })
-      .catch(error => {
-        console.log("Error fetching houses:", error);
-      });
-  }
-  
-
-  fetchAndDisplayHousesInKileleshwa();
-  ///////////////////////////////////////////////////////////////////////////KAREN///////////////////////////////////////////////////////////////////////////////////////
-  function fetchAndDisplayHousesInKaren() {
-    const karendiv = document.getElementById("karenDiv");
-  
-    fetch("http://localhost:3000/properties")
-      .then(response => response.json())
-      .then(data => {
-        // Filter houses in Karen
-        const karenHouses = data.filter(house => house.location === "Karen");
-  
-        // Clear previous content
         karendiv.innerHTML = "";
-  
-        // Iterate through the houses and display their details in styled boxes
-        karenHouses.forEach(house => {
-          // Create a box element for each house
-          const houseBox = document.createElement("div");
-          houseBox.classList.add("house-box");
-  
-          // Create an image element for the house
-          const imageElement = document.createElement("img");
-          imageElement.src = house.image;
-          imageElement.alt = house.name;
-          imageElement.classList.add("house-image");
-  
-          // Create individual elements for other house details
-          const nameElement = document.createElement("p");
-          nameElement.textContent = `Name: ${house.name}`;
-  
-          const bedroomsElement = document.createElement("p");
-          bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
-  
-          const bathroomsElement = document.createElement("p");
-          bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
-  
-          const priceElement = document.createElement("p");
-          priceElement.textContent = `Price: ${house.price}`;
-  
-          // Append the elements to the house box
-          houseBox.appendChild(imageElement);
-          houseBox.appendChild(nameElement);
-          houseBox.appendChild(bedroomsElement);
-          houseBox.appendChild(bathroomsElement);
-          houseBox.appendChild(priceElement);
-  
-          // Append the house box to the karendiv
-          karendiv.appendChild(houseBox);
-        });
-      })
-      .catch(error => {
-        console.log("Error fetching houses:", error);
-      });
-  }
-  
-
-  fetchAndDisplayHousesInKaren();
-////////////////////////////////////////////////////////////////////////////WESTLANS////////////////////////////////////////////////////////////////////////////////////
-  function fetchAndDisplayHousesInWestlands() {
-    const westieDiv = document.getElementById("westieDiv");
-  
-    fetch("http://localhost:3000/properties")
-      .then(response => response.json())
-      .then(data => {
-        // Filter houses in Westlands
-        const westlandsHouses = data.filter(house => house.location === "Westlands");
-  
-        // Clear previous content
         westieDiv.innerHTML = "";
-  
-        // Iterate through the houses and display their details in styled boxes
-        westlandsHouses.forEach(house => {
-          // Create a box element for each house
-          const houseBox = document.createElement("div");
-          houseBox.classList.add("house-box");
-  
-          // Create an image element for the house
-          const imageElement = document.createElement("img");
-          imageElement.src = house.image;
-          imageElement.alt = house.name;
-          imageElement.classList.add("house-image");
-  
-          // Create individual elements for other house details
-          const nameElement = document.createElement("p");
-          nameElement.textContent = `Name: ${house.name}`;
-  
-          const bedroomsElement = document.createElement("p");
-          bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
-  
-          const bathroomsElement = document.createElement("p");
-          bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
-  
-          const priceElement = document.createElement("p");
-          priceElement.textContent = `Price: ${house.price}`;
-  
-          // Append the elements to the house box
-          houseBox.appendChild(imageElement);
-          houseBox.appendChild(nameElement);
-          houseBox.appendChild(bedroomsElement);
-          houseBox.appendChild(bathroomsElement);
-          houseBox.appendChild(priceElement);
-  
-          // Append the house box to the westieDiv
-          westieDiv.appendChild(houseBox);
-        });
-      })
-      .catch(error => {
-        console.log("Error fetching houses:", error);
-      });
-  }
-  
-
-  fetchAndDisplayHousesInWestlands();
-///////////////////////////////////////////////////////////////////////LAVINGTON////////////////////////////////////////////////////////////////////////////
-  function fetchAndDisplayHousesInLavington() {
-    const laviDiv = document.getElementById("laviDiv");
-  
-    fetch("http://localhost:3000/properties")
-      .then(response => response.json())
-      .then(data => {
-        // Filter houses in Lavington
-        const lavingtonHouses = data.filter(house => house.location === "Lavington");
-  
-        // Clear previous content
         laviDiv.innerHTML = "";
   
         // Iterate through the houses and display their details in styled boxes
-        lavingtonHouses.forEach(house => {
+        data.forEach(house => {
           // Create a box element for each house
           const houseBox = document.createElement("div");
           houseBox.classList.add("house-box");
@@ -242,15 +38,33 @@ function fetchAndDisplayHousesInKileleshwa() {
           const priceElement = document.createElement("p");
           priceElement.textContent = `Price: ${house.price}`;
   
+          const availabilityElement = document.createElement("p");
+          if (house.available) {
+            const bookTourButton = document.createElement("button");
+            bookTourButton.textContent = "Book Tour";
+            availabilityElement.appendChild(bookTourButton);
+          } else {
+            availabilityElement.textContent = "SOLD OUT";
+          }
+  
           // Append the elements to the house box
           houseBox.appendChild(imageElement);
           houseBox.appendChild(nameElement);
           houseBox.appendChild(bedroomsElement);
           houseBox.appendChild(bathroomsElement);
           houseBox.appendChild(priceElement);
+          houseBox.appendChild(availabilityElement);
   
-          // Append the house box to the laviDiv
-          laviDiv.appendChild(houseBox);
+          // Append the house box to the respective location div based on house location
+          if (house.location === "Kileleshwa") {
+            kilediv.appendChild(houseBox);
+          } else if (house.location === "Karen") {
+            karendiv.appendChild(houseBox);
+          } else if (house.location === "Westlands") {
+            westieDiv.appendChild(houseBox);
+          } else if (house.location === "Lavington") {
+            laviDiv.appendChild(houseBox);
+          }
         });
       })
       .catch(error => {
@@ -258,9 +72,235 @@ function fetchAndDisplayHousesInKileleshwa() {
       });
   }
   
+  // Rest of the code...
+  
+  // Fetch and display all houses on page load
+  fetchAndDisplayHouses();
+// //////////////////////////////////////////////////////////////////KILELESHWA////////////////////////////////////////////////////////////////////////////////////
+// function fetchAndDisplayHousesInKileleshwa() {
+//     const kilediv = document.getElementById("kilediv");
+  
+//     fetch("http://localhost:3000/properties")
+//       .then(response => response.json())
+//       .then(data => {
+//         // Filter houses in Kileleshwa
+//         const kileleshwaHouses = data.filter(house => house.location === "Kileleshwa");
+  
+//         // Clear previous content
+//         kilediv.innerHTML = "";
+  
+//         // Iterate through the houses and display their details in styled boxes
+//         kileleshwaHouses.forEach(house => {
+//           // Create a box element for each house
+//           const houseBox = document.createElement("div");
+//           houseBox.classList.add("house-box");
+  
+//           // Create an image element for the house
+//           const imageElement = document.createElement("img");
+//           imageElement.src = house.image;
+//           imageElement.alt = house.name;
+//           imageElement.classList.add("house-image");
+  
+//           // Create individual elements for other house details
+//           const nameElement = document.createElement("p");
+//           nameElement.textContent = `Name: ${house.name}`;
+  
+//           const bedroomsElement = document.createElement("p");
+//           bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
+  
+//           const bathroomsElement = document.createElement("p");
+//           bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
+  
+//           const priceElement = document.createElement("p");
+//           priceElement.textContent = `Price: ${house.price}`;
+  
+//           // Append the elements to the house box
+//           houseBox.appendChild(imageElement);
+//           houseBox.appendChild(nameElement);
+//           houseBox.appendChild(bedroomsElement);
+//           houseBox.appendChild(bathroomsElement);
+//           houseBox.appendChild(priceElement);
+  
+//           // Append the house box to the kilediv
+//           kilediv.appendChild(houseBox);
+//         });
+//       })
+//       .catch(error => {
+//         console.log("Error fetching houses:", error);
+//       });
+//   }
+  
 
-  fetchAndDisplayHousesInLavington();
-  ////////////////////////////////////////////////////////////////////DONE//////////////////////////////////////////////////////////////////////////////////////
+//   fetchAndDisplayHousesInKileleshwa();
+//   ///////////////////////////////////////////////////////////////////////////KAREN///////////////////////////////////////////////////////////////////////////////////////
+//   function fetchAndDisplayHousesInKaren() {
+//     const karendiv = document.getElementById("karenDiv");
+  
+//     fetch("http://localhost:3000/properties")
+//       .then(response => response.json())
+//       .then(data => {
+//         // Filter houses in Karen
+//         const karenHouses = data.filter(house => house.location === "Karen");
+  
+//         // Clear previous content
+//         karendiv.innerHTML = "";
+  
+//         // Iterate through the houses and display their details in styled boxes
+//         karenHouses.forEach(house => {
+//           // Create a box element for each house
+//           const houseBox = document.createElement("div");
+//           houseBox.classList.add("house-box");
+  
+//           // Create an image element for the house
+//           const imageElement = document.createElement("img");
+//           imageElement.src = house.image;
+//           imageElement.alt = house.name;
+//           imageElement.classList.add("house-image");
+  
+//           // Create individual elements for other house details
+//           const nameElement = document.createElement("p");
+//           nameElement.textContent = `Name: ${house.name}`;
+  
+//           const bedroomsElement = document.createElement("p");
+//           bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
+  
+//           const bathroomsElement = document.createElement("p");
+//           bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
+  
+//           const priceElement = document.createElement("p");
+//           priceElement.textContent = `Price: ${house.price}`;
+  
+//           // Append the elements to the house box
+//           houseBox.appendChild(imageElement);
+//           houseBox.appendChild(nameElement);
+//           houseBox.appendChild(bedroomsElement);
+//           houseBox.appendChild(bathroomsElement);
+//           houseBox.appendChild(priceElement);
+  
+//           // Append the house box to the karendiv
+//           karendiv.appendChild(houseBox);
+//         });
+//       })
+//       .catch(error => {
+//         console.log("Error fetching houses:", error);
+//       });
+//   }
+  
+
+//   fetchAndDisplayHousesInKaren();
+// ////////////////////////////////////////////////////////////////////////////WESTLANS////////////////////////////////////////////////////////////////////////////////////
+//   function fetchAndDisplayHousesInWestlands() {
+//     const westieDiv = document.getElementById("westieDiv");
+  
+//     fetch("http://localhost:3000/properties")
+//       .then(response => response.json())
+//       .then(data => {
+//         // Filter houses in Westlands
+//         const westlandsHouses = data.filter(house => house.location === "Westlands");
+  
+//         // Clear previous content
+//         westieDiv.innerHTML = "";
+  
+//         // Iterate through the houses and display their details in styled boxes
+//         westlandsHouses.forEach(house => {
+//           // Create a box element for each house
+//           const houseBox = document.createElement("div");
+//           houseBox.classList.add("house-box");
+  
+//           // Create an image element for the house
+//           const imageElement = document.createElement("img");
+//           imageElement.src = house.image;
+//           imageElement.alt = house.name;
+//           imageElement.classList.add("house-image");
+  
+//           // Create individual elements for other house details
+//           const nameElement = document.createElement("p");
+//           nameElement.textContent = `Name: ${house.name}`;
+  
+//           const bedroomsElement = document.createElement("p");
+//           bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
+  
+//           const bathroomsElement = document.createElement("p");
+//           bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
+  
+//           const priceElement = document.createElement("p");
+//           priceElement.textContent = `Price: ${house.price}`;
+  
+//           // Append the elements to the house box
+//           houseBox.appendChild(imageElement);
+//           houseBox.appendChild(nameElement);
+//           houseBox.appendChild(bedroomsElement);
+//           houseBox.appendChild(bathroomsElement);
+//           houseBox.appendChild(priceElement);
+  
+//           // Append the house box to the westieDiv
+//           westieDiv.appendChild(houseBox);
+//         });
+//       })
+//       .catch(error => {
+//         console.log("Error fetching houses:", error);
+//       });
+//   }
+  
+
+//   fetchAndDisplayHousesInWestlands();
+// ///////////////////////////////////////////////////////////////////////LAVINGTON////////////////////////////////////////////////////////////////////////////
+//   function fetchAndDisplayHousesInLavington() {
+//     const laviDiv = document.getElementById("laviDiv");
+  
+//     fetch("http://localhost:3000/properties")
+//       .then(response => response.json())
+//       .then(data => {
+//         // Filter houses in Lavington
+//         const lavingtonHouses = data.filter(house => house.location === "Lavington");
+  
+//         // Clear previous content
+//         laviDiv.innerHTML = "";
+  
+//         // Iterate through the houses and display their details in styled boxes
+//         lavingtonHouses.forEach(house => {
+//           // Create a box element for each house
+//           const houseBox = document.createElement("div");
+//           houseBox.classList.add("house-box");
+  
+//           // Create an image element for the house
+//           const imageElement = document.createElement("img");
+//           imageElement.src = house.image;
+//           imageElement.alt = house.name;
+//           imageElement.classList.add("house-image");
+  
+//           // Create individual elements for other house details
+//           const nameElement = document.createElement("p");
+//           nameElement.textContent = `Name: ${house.name}`;
+  
+//           const bedroomsElement = document.createElement("p");
+//           bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
+  
+//           const bathroomsElement = document.createElement("p");
+//           bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
+  
+//           const priceElement = document.createElement("p");
+//           priceElement.textContent = `Price: ${house.price}`;
+  
+//           // Append the elements to the house box
+//           houseBox.appendChild(imageElement);
+//           houseBox.appendChild(nameElement);
+//           houseBox.appendChild(bedroomsElement);
+//           houseBox.appendChild(bathroomsElement);
+//           houseBox.appendChild(priceElement);
+  
+//           // Append the house box to the laviDiv
+//           laviDiv.appendChild(houseBox);
+//         });
+//       })
+//       .catch(error => {
+//         console.log("Error fetching houses:", error);
+//       });
+//   }
+  
+
+//   fetchAndDisplayHousesInLavington();
+//   ////////////////////////////////////////////////////////////////////DONE//////////////////////////////////////////////////////////////////////////////////////
 
 
 // Get the Kileleshwa link element
@@ -468,3 +508,93 @@ document.addEventListener("DOMContentLoaded", function() {
       contactsDiv.scrollIntoView({ behavior: "smooth" });
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+function fetchAndDisplayHouses() {
+    fetch("http://localhost:3000/properties")
+      .then(response => response.json())
+      .then(data => {
+        const kilediv = document.getElementById("kilediv");
+        const karendiv = document.getElementById("karenDiv");
+        const westieDiv = document.getElementById("westieDiv");
+        const laviDiv = document.getElementById("laviDiv");
+  
+        // Clear previous content
+        kilediv.innerHTML = "";
+        karendiv.innerHTML = "";
+        westieDiv.innerHTML = "";
+        laviDiv.innerHTML = "";
+  
+        // Iterate through the houses and display their details in styled boxes
+        data.forEach(house => {
+          // Create a box element for each house
+          const houseBox = document.createElement("div");
+          houseBox.classList.add("house-box");
+  
+          // Create an image element for the house
+          const imageElement = document.createElement("img");
+          imageElement.src = house.image;
+          imageElement.alt = house.name;
+          imageElement.classList.add("house-image");
+  
+          // Create individual elements for other house details
+          const nameElement = document.createElement("p");
+          nameElement.textContent = `Name: ${house.name}`;
+  
+          const bedroomsElement = document.createElement("p");
+          bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
+  
+          const bathroomsElement = document.createElement("p");
+          bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
+  
+          const priceElement = document.createElement("p");
+          priceElement.textContent = `Price: ${house.price}`;
+  
+          const availabilityElement = document.createElement("p");
+          if (house.available) {
+            const bookTourButton = document.createElement("button");
+            bookTourButton.textContent = "Book Tour";
+            availabilityElement.appendChild(bookTourButton);
+          } else {
+            availabilityElement.textContent = "SOLD OUT";
+          }
+  
+          // Append the elements to the house box
+          houseBox.appendChild(imageElement);
+          houseBox.appendChild(nameElement);
+          houseBox.appendChild(bedroomsElement);
+          houseBox.appendChild(bathroomsElement);
+          houseBox.appendChild(priceElement);
+          houseBox.appendChild(availabilityElement);
+  
+          // Append the house box to the respective location div based on house location
+          if (house.location === "Kileleshwa") {
+            kilediv.appendChild(houseBox);
+          } else if (house.location === "Karen") {
+            karendiv.appendChild(houseBox);
+          } else if (house.location === "Westlands") {
+            westieDiv.appendChild(houseBox);
+          } else if (house.location === "Lavington") {
+            laviDiv.appendChild(houseBox);
+          }
+        });
+      })
+      .catch(error => {
+        console.log("Error fetching houses:", error);
+      });
+  }
+  
+  // Rest of the code...
+  
+  // Fetch and display all houses on page load
+  fetchAndDisplayHouses();
+  
