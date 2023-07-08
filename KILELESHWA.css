@@ -308,4 +308,10 @@ margin-bottom: 0px;
     font-family: "Arial", sans-serif;
     line-height: 1.5;
   }
-  
+#aboutImg{
+    width: 344px;
+height: 520px;
+flex-shrink: 0;
+border-radius: 70px;
+
+}

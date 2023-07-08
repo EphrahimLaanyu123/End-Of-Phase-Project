@@ -59,8 +59,9 @@
     <div class="aboutus">
         <h1>ABOUT US</h1>
         <div id="aboutus1">
-            <!-- <div id="aboutus2"></div> -->
-            <h1 id="aboutUsHeader">ABOUT US
+            <h1 id="aboutUsHeader">ABOUT US</h1>
+            <div id="aboutContent">
+                <img id="aboutImg" src="./images/pexels-ono-kosuki-6000155.jpg" alt="">
                 <p id="aboutUsP">At <br>
                     Proplist <br>
                     Real Estate: Your <br>
@@ -69,9 +70,10 @@
                     dream home or <br>
                     selling your property <br>
                     seamlessly.
-                 </p>
-            </h1>
+                </p>
+            </div>
         </div>
+        
     </div>
     <div class="contacts">
         <img id="bridgeimg" src="./images/joseph-barrientos-CtNeE97Dadk-unsplash.jpg" alt="">
@@ -86,6 +88,35 @@
             BY APPOINTMENTS</p> -->
     
     </div>
+    <h1>House Details Form</h1>
+
+    <form id="houseForm">
+      <div>
+        <label for="nameInput">House Name:</label>
+        <input type="text" id="nameInput" required>
+      </div>
+      <div>
+        <label for="locationInput">Location:</label>
+        <input type="text" id="locationInput" required>
+      </div>
+      <div>
+        <label for="bedroomsInput">Number of Bedrooms:</label>
+        <input type="number" id="bedroomsInput" required>
+      </div>
+      <div>
+        <label for="bathroomsInput">Number of Bathrooms:</label>
+        <input type="number" id="bathroomsInput" required>
+      </div>
+      <div>
+        <label for="priceInput">Price:</label>
+        <input type="number" id="priceInput" required>
+      </div>
+      <div>
+        <label for="imageInput">Image URL:</label>
+        <input type="text" id="imageInput" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
     <script src="karen.js"></script>
 </body>
 </html>
