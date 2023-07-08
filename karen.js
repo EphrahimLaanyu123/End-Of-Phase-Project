@@ -434,4 +434,37 @@ function fetchAndDisplayHouses() {
   
   // Fetch and display all houses on page load
   fetchAndDisplayHouses();
+
   
+  // karen.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    const locationsButton = document.getElementById("HomeLocations");
+    const locationsDiv = document.querySelector(".locations");
+  
+    locationsButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      locationsDiv.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+  
+
+document.addEventListener("DOMContentLoaded", function() {
+    const aboutButton = document.getElementById("about");
+    const aboutusDiv = document.querySelector(".aboutus");
+  
+    aboutButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      aboutusDiv.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const contactsButton = document.getElementById("contacts");
+    const contactsDiv = document.querySelector(".contacts");
+  
+    contactsButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      contactsDiv.scrollIntoView({ behavior: "smooth" });
+    });
+  });
