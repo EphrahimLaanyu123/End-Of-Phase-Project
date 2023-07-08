@@ -299,3 +299,13 @@ margin-top: 60px;
 margin-bottom: 0px;
 }
 
+#aboutUsHeader{
+    color: #FFF;
+    margin-left: 100px;
+}
+#aboutUsP {
+    font-size: 60px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
+  }
+  
