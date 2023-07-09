@@ -138,11 +138,8 @@ font-family: Julius Sans One;
 #allListings{
     color: #E22D2D;
 }
-.contacts{
-    /* width: 1440px;
-height: 1024px;
-background: #FFF;
-background-size: cover; */
+/* .contacts{
+
 width: 1440px;
 height: 1024px;
 background: #292424;
@@ -188,7 +185,7 @@ line-height: normal;
     height: 292px;
     flex-direction: column;
     flex-shrink: 0;
-}
+} */
 /* #kilediv{
 display: none;
 color: #8caf4a;
@@ -460,4 +457,55 @@ border-radius: 70px;
   }
   
   /* Add the rest of the styling rules mentioned in the previous response */
+  .contacts {
+    background-color: #292424;
+    color: #ffffff;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .contact-content {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    margin-right: 40px;
+  }
+  
+  .contact-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-details {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .contact-details li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-details li span {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .contact-info {
+    font-size: 1.1rem;
+  }
+  
+  .contacts img#logo2 {
+    max-width: 200px;
+    margin-top: 20px;
+  }
   
