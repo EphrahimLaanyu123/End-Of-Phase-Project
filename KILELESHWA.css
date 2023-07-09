@@ -1,5 +1,6 @@
 body{
-    background: url(./images/IMG-1944.jpg), lightgray 50%;
+    /* background: url(./images/IMG-1944.jpg), lightgray 50%; */
+    background-color: #211E1E;
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
