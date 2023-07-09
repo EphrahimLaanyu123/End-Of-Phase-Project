@@ -744,5 +744,9 @@ function fetchAndDisplayHouses() {
     });
   }
   toggleHouseForm();
-
-  
+  function goToSellForm() {
+    const houseFormDiv = document.getElementById("houseFormDiv");
+    houseFormDiv.scrollIntoView({ behavior: "smooth" });
+  }
+  const sellButton = document.getElementById("sell");
+sellButton.addEventListener("click", goToSellForm);
