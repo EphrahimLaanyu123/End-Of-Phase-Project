@@ -519,6 +519,80 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// function fetchAndDisplayHouses() {
+//     fetch("http://localhost:3000/properties")
+//       .then(response => response.json())
+//       .then(data => {
+//         const kilediv = document.getElementById("kilediv");
+//         const karendiv = document.getElementById("karenDiv");
+//         const westieDiv = document.getElementById("westieDiv");
+//         const laviDiv = document.getElementById("laviDiv");
+  
+//         // Clear previous content
+//         kilediv.innerHTML = "";
+//         karendiv.innerHTML = "";
+//         westieDiv.innerHTML = "";
+//         laviDiv.innerHTML = "";
+  
+//         // Iterate through the houses and display their details in styled boxes
+//         data.forEach(house => {
+//           // Create a box element for each house
+//           const houseBox = document.createElement("div");
+//           houseBox.classList.add("house-box");
+  
+//           // Create an image element for the house
+//           const imageElement = document.createElement("img");
+//           imageElement.src = house.image;
+//           imageElement.alt = house.name;
+//           imageElement.classList.add("house-image");
+  
+//           // Create individual elements for other house details
+//           const nameElement = document.createElement("p");
+//           nameElement.textContent = `Name: ${house.name}`;
+  
+//           const bedroomsElement = document.createElement("p");
+//           bedroomsElement.textContent = `Bedrooms: ${house.bedrooms}`;
+  
+//           const bathroomsElement = document.createElement("p");
+//           bathroomsElement.textContent = `Bathrooms: ${house.bathrooms}`;
+  
+//           const priceElement = document.createElement("p");
+//           priceElement.textContent = `Price: ${house.price}`;
+  
+//           const availabilityElement = document.createElement("p");
+//           if (house.available) {
+//             const bookTourButton = document.createElement("button");
+//             bookTourButton.textContent = "Book Tour";
+//             availabilityElement.appendChild(bookTourButton);
+//           } else {
+//             availabilityElement.textContent = "SOLD OUT";
+//           }
+  
+//           // Append the elements to the house box
+//           houseBox.appendChild(imageElement);
+//           houseBox.appendChild(nameElement);
+//           houseBox.appendChild(bedroomsElement);
+//           houseBox.appendChild(bathroomsElement);
+//           houseBox.appendChild(priceElement);
+//           houseBox.appendChild(availabilityElement);
+  
+//           // Append the house box to the respective location div based on house location
+//           if (house.location === "Kileleshwa") {
+//             kilediv.appendChild(houseBox);
+//           } else if (house.location === "Karen") {
+//             karendiv.appendChild(houseBox);
+//           } else if (house.location === "Westlands") {
+//             westieDiv.appendChild(houseBox);
+//           } else if (house.location === "Lavington") {
+//             laviDiv.appendChild(houseBox);
+//           }
+//         });
+//       })
+//       .catch(error => {
+//         console.log("Error fetching houses:", error);
+//       });
+//   }
+  
 function fetchAndDisplayHouses() {
     fetch("http://localhost:3000/properties")
       .then(response => response.json())
@@ -564,6 +638,68 @@ function fetchAndDisplayHouses() {
             const bookTourButton = document.createElement("button");
             bookTourButton.textContent = "Book Tour";
             availabilityElement.appendChild(bookTourButton);
+  
+            // Add event listener to the "Book Tour" button
+            bookTourButton.addEventListener("click", function() {
+              // Check if the tour form already exists
+              if (houseBox.querySelector("#tourForm") === null) {
+                // Create the tour form
+                const tourForm = document.createElement("form");
+                tourForm.id = "tourForm";
+  
+                const nameDiv = document.createElement("div");
+                const nameLabel = document.createElement("label");
+                nameLabel.textContent = "Name:";
+                const nameInput = document.createElement("input");
+                nameInput.type = "text";
+                nameInput.id = "nameInput";
+                nameInput.required = true;
+                nameDiv.appendChild(nameLabel);
+                nameDiv.appendChild(nameInput);
+                tourForm.appendChild(nameDiv);
+  
+                const emailDiv = document.createElement("div");
+                const emailLabel = document.createElement("label");
+                emailLabel.textContent = "Email:";
+                const emailInput = document.createElement("input");
+                emailInput.type = "email";
+                emailInput.id = "emailInput";
+                emailInput.required = true;
+                emailDiv.appendChild(emailLabel);
+                emailDiv.appendChild(emailInput);
+                tourForm.appendChild(emailDiv);
+  
+                const phoneDiv = document.createElement("div");
+                const phoneLabel = document.createElement("label");
+                phoneLabel.textContent = "Phone:";
+                const phoneInput = document.createElement("input");
+                phoneInput.type = "tel";
+                phoneInput.id = "phoneInput";
+                phoneInput.required = true;
+                phoneDiv.appendChild(phoneLabel);
+                phoneDiv.appendChild(phoneInput);
+                tourForm.appendChild(phoneDiv);
+  
+                const dateDiv = document.createElement("div");
+                const dateLabel = document.createElement("label");
+                dateLabel.textContent = "Tour Date:";
+                const dateInput = document.createElement("input");
+                dateInput.type = "date";
+                dateInput.id = "dateInput";
+                dateInput.required = true;
+                dateDiv.appendChild(dateLabel);
+                dateDiv.appendChild(dateInput);
+                tourForm.appendChild(dateDiv);
+  
+                const submitButton = document.createElement("button");
+                submitButton.type = "submit";
+                submitButton.textContent = "Book Tour";
+                tourForm.appendChild(submitButton);
+  
+                // Append the tour form to the house box
+                houseBox.appendChild(tourForm);
+              }
+            });
           } else {
             availabilityElement.textContent = "SOLD OUT";
           }
@@ -597,4 +733,16 @@ function fetchAndDisplayHouses() {
   
   // Fetch and display all houses on page load
   fetchAndDisplayHouses();
+
+  function toggleHouseForm() {
+    const sellButton = document.getElementById("sell");
+    const houseFormDiv = document.getElementById("houseFormDiv");
+  
+    sellButton.addEventListener("click", function() {
+      // Toggle the visibility of the houseFormDiv
+      houseFormDiv.style.display = houseFormDiv.style.display === "none" ? "block" : "none";
+    });
+  }
+  toggleHouseForm();
+
   

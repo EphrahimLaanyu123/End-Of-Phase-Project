@@ -7,8 +7,50 @@ body{
     background-size: 100% 100%;
     margin: 0;
 }
-
-.HomeTopBar {
+.navB {
+    background-color: #292424;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .HomeTopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .HomeTopBar img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .HomeTopBar button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .HomeTopBar button:hover {
+    background-color: #4B4949;
+  }
+  
+  #moto1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+/* .HomeTopBar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,13 +64,13 @@ body{
     margin-right: 10px;
 }
 .HomeTopBar button {
-    margin-right: 100px; /* Add right margin to create spacing between buttons */
+    margin-right: 100px;
     position: relative;
     z-index: 1;
   }
   
   .HomeTopBar button:last-child {
-    margin-right: 0; /* Remove right margin for the last button */
+    margin-right: 0; 
   }
 
   
@@ -53,24 +95,17 @@ body{
 #moto1{
     
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    /* width: 1440px;
-    height: 1024px; */
-    /* margin-top: 247px;
-    margin-bottom: 195px;
-    margin-left: 143px;
-    margin-right: 423px; */
     display: flex;
-    /* width: 874px;
-    height: 582px; */
+
     flex-direction: column;
     flex-shrink: 0;
     color: #FFF;
-    /* font-size: 128px; */
+
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+} */
 .locations{
     width: 1440px;
     height: 1024px;
@@ -508,4 +543,252 @@ border-radius: 70px;
     max-width: 200px;
     margin-top: 20px;
   }
+  .navBar {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
   
+  .logo-container img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navLinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navLinks li {
+    margin-right: 20px;
+  }
+  
+  .navLinks a {
+    color: #292424;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks a:hover {
+    color: #4B4949;
+  }
+  
+  .navLinks .active {
+    color: #4B4949;
+    border-bottom: 2px solid #4B4949;
+  }
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .home-page {
+    height: 100%;
+    background-color: #292424;
+    padding: 40px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .line {
+    width: 50%;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  
+  .content {
+    margin-bottom: 40px;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .get-started {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .get-started:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .additional-content {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .ready {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .browse {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .browse:hover {
+    background-color: #e6e6e6;
+  }
+  
+  h1 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    color: #333333;
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #4b4949;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #292424;
+  }
+  .home-page {
+    background-color: #292424;
+    color: #ffffff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .line {
+    height: 2px;
+    width: 50px;
+    background-color: #ffffff;
+    margin: 0 10px;
+  }
+  
+  .content {
+    margin-bottom: 30px;
+  }
+  
+  .description {
+    font-size: 69px;
+    line-height: 1.4;
+    margin-top: 0;
+  }
+  
+  .additional-content {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .ready {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+#welcomeTo{
+    font-size: 80px;
+}

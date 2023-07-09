@@ -9,19 +9,57 @@
 </head>
 <body>
 
-    <div class="Home">
-
+    <nav class="naBar">
         <ul class="HomeTopBar">
-            <img src="./images/download (1).png" alt="">
-            <button id="TheHomeBar">HOME</button>
-            <button id="HomeLocations">LOCATIONS</button>
-
-            <button id="about">ABOUT</button>
-            <button id="contacts">CONTACTS</button>
-            <button id="sell">SELL</button>
+          <img src="./images/download (1).png" alt="">
+          <button id="TheHomeBar">HOME</button>
+          <button id="HomeLocations">LOCATIONS</button>
+          <button id="about">ABOUT</button>
+          <button id="contacts">CONTACTS</button>
+          <button id="sell">SELL</button>
         </ul>
-        <p id="moto1">FIND YOUR DREAM HOME</p>
-    </div>
+    </nav>
+    <!-- <nav class="navBar">
+        <div class="logo-container">
+          <img src="./images/download (1).png" alt="Logo">
+        </div>
+        <ul class="navLinks">
+          <li><a href="#" class="active">HOME</a></li>
+          <li><a href="#">LOCATIONS</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACTS</a></li>
+          <li><a href="#">SELL</a></li>
+        </ul>
+      </nav> -->
+
+      <div class="home-page">
+        <div class="lines">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="content">
+          <h1 id="welcomeTo">Welcome to Proplist</h1>
+          <p class="description">Discover the Finest Luxury Properties</p>
+        </div>
+        <div class="additional-content">
+          <h2>Why Choose Proplist?</h2>
+          <ul>
+            <li>Exclusive collection of luxury properties</li>
+            <li>Unparalleled customer service</li>
+            <li>Expert knowledge of luxury real estate market</li>
+            <li>Tailored solutions for your unique needs</li>
+            <li>Secure and confidential transactions</li>
+            <li>Professional guidance throughout the process</li>
+          </ul>
+          <p class="ready">Ready to Find Your Dream Home?</p>
+        </div>
+      </div>
+      
+      
+
+    
+      
+      
     <div class="locations">
         <div id="locations2">
             <h1 id="explore">EXPLORE</h1>
@@ -57,25 +95,7 @@
         <h1>LAVINGTON</h1>
 
     </div>
-    <!-- <div class="aboutus">
-        <h1>ABOUT US</h1>
-        <div id="aboutus1">
-            <h1 id="aboutUsHeader">ABOUT US</h1>
-            <div id="aboutContent">
-                <img id="aboutImg" src="./images/pexels-ono-kosuki-6000155.jpg" alt="">
-                <p id="aboutUsP">At <br>
-                    Proplist <br>
-                    Real Estate: Your <br>
-                    one-stop destination <br>
-                    for finding your <br>
-                    dream home or <br>
-                    selling your property <br>
-                    seamlessly.
-                </p>
-            </div>
-        </div>
-        
-    </div> -->
+
     <div class="about-section">
         <div class="about-content">
           <h1>About PROPLIST</h1>
@@ -116,25 +136,8 @@
       </div>
       
       
-    <form id="tourForm">
-        <div>
-          <label for="nameInput">Name:</label>
-          <input type="text" id="nameInput" required>
-        </div>
-        <div>
-          <label for="emailInput">Email:</label>
-          <input type="email" id="emailInput" required>
-        </div>
-        <div>
-          <label for="phoneInput">Phone:</label>
-          <input type="tel" id="phoneInput" required>
-        </div>
-        <div>
-          <label for="dateInput">Tour Date:</label>
-          <input type="date" id="dateInput" required>
-        </div>
-        <button type="submit">Book Tour</button>
-      </form>
+      
+ 
     
       <script>
 // Function to handle the form submission
@@ -184,8 +187,10 @@ function handleFormSubmit(event) {
 }
 
       </script>
-    <h1>House Details Form</h1>
+   
+<div>
 
+</div id="houseFormDiv">
     <form id="houseForm">
       <div>
         <label for="nameInput">House Name:</label>
@@ -213,6 +218,8 @@ function handleFormSubmit(event) {
       </div>
       <button type="submit">SELL</button>
     </form>
+
+</div>
     <script src="karen.js"></script>
 </body>
 </html>
